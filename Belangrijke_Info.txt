@@ -1,0 +1,13 @@
+de link naar mijn oege server:
+
+https://oege.ie.hva.nl/~donkerc4/Internetstandaarden_1/
+
+Verdiepings keuze:
+
+Web & Wereld: Animatie
+
+Verandered sinds 1e inlever moment:
+
+- navigatie opegeschoond van links naar knoppen
+- div's verwijdert uit de code en naar semantische elementen omgezet
+- dubbele objecten in de css samengevoegd waardoor het css bestand een stuk kleiner is.

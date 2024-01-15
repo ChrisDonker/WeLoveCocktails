@@ -1,0 +1,458 @@
+/* Variables */
+/* ------------------------------------ */
+
+:root {
+    /* colors */
+    --bg-color: #161616;
+    --def-text-color: #FFFFFF;
+    --selected-text-color: rgb(116, 116, 197);
+    --footer-bg-color: rgb(49, 46, 46);
+    --footer-link-color: yellow;
+
+    --info-block-border-color-1: blue;
+
+    --textgradient-color-1: #DFB79E;
+    --textgradient-color-2: #2B0413;
+    --textgradient-color-3: #E25D52;
+
+    /* Animation */
+    --textgradient-duration: 15s;
+    --timelinecup-duration: 10s;
+    --spinner-duration: 8s;
+    --recipe-duration: 5s;
+
+
+
+    /* Asorti */
+    --left-spacing: 2%;
+    --right-spacing: 3%;
+
+
+}
+
+/* ------------------------------------ */
+
+
+/* Global */
+/* ------------------------------------ */
+
+body {
+    background: transparent url("../.img/pattern.png") repeat top left;
+    background-color: var(--bg-color);
+    overflow-y: scroll;
+}
+
+body p {
+    color: white;
+    font-family: Tahoma, Trebuchet;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 850%;
+}
+
+h2 {
+    font-family: serif;
+}
+
+h3 {
+    font-family: serif;
+    font-style: italic;
+}
+
+.divider {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+body::-webkit-scrollbar {
+    display: none;
+
+}
+
+th {
+    color: white;
+}
+
+#Home header,
+#Origin header,
+#Recipe header,
+#Source header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+/* ------------------------------------ */
+
+
+
+/* Navagation */
+/* ------------------------------------ */
+
+nav ul li {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: medium;
+    list-style: none;
+}
+
+
+.active {
+    color: var(--selected-text-color);
+}
+
+nav ul {
+    display: flex;
+    justify-content: right;
+    text-align: center;
+}
+
+#word-title {
+    font-size: xx-large;
+    position: relative;
+    left: var(--left-spacing);
+
+}
+
+/* ------------------------------------ */
+
+
+/* Footer */
+/* ------------------------------------ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+
+    background: var(--footer-bg-color);
+}
+
+footer a {
+    color: var(--footer-link-color);
+    font-weight: 300;
+    font-style: italic;
+}
+
+footer p {
+    white-space: pre-line;
+    line-height:190%;
+}
+
+/* ------------------------------------ */
+
+
+
+
+/* Layout of the pages */
+/* ------------------------------------ */
+
+.InformationBlock {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 0.75%;
+}
+
+.InformationBlock li {
+    border: 3px solid var(--info-block-border-color-1);
+    padding: 20px 40px 40px;
+    max-width: 500px;
+
+    display: grid;
+    grid-template-rows: [row1-start] 50% [row1-end] 50% [lastline];
+    flex-direction: column;
+
+}
+
+.PlaceTop {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 2;
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.PlaceBottom {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: 2;
+    grid-row-end: 3;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.InformationBlock p {
+    white-space: pre-line;
+    line-height:140%;
+}
+
+.InformationBlock h2 {
+    text-align: center;
+    color: white
+}
+.InformationBlock h3 {
+    text-align: center;
+    color: white;
+}
+
+#Famous .InformationBlock img, #Recipe .InformationBlock img  {
+    min-height: 500px;
+}
+
+
+
+.InformationBlock table {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* The Famous Ones Page */
+/* ------------------------------------ */
+
+#Famous header {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.headerIMG {
+    display: flex;
+    margin: auto;
+}
+
+#Famous article p {
+    max-width: 500px;
+}
+
+/* ------------------------------------ */
+
+
+/* The Recipes Page */
+/* ------------------------------------ */
+
+#Recipe .bottles {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+#Recipe #ocean {
+    z-index: 3;
+    position: relative;
+    top: 60px;
+}
+
+/* ------------------------------------ */
+
+
+/* The Origin Page */
+/* ------------------------------------ */
+
+#Origin #timeLine {
+    display: flex;
+    margin: auto;
+}
+/* ------------------------------------ */
+
+
+/* The Sources Page */
+/* ------------------------------------ */
+
+#Source #links li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Source #links article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Source #links article a {
+    font-size: 3rem;
+}
+
+/* ------------------------------------ */
+
+
+/* Animations */
+/* ------------------------------------ */
+
+/* Spin */
+/* ------------------------------------ */
+
+.Spin {
+    position: relative;
+    left: var(--left-spacing);
+    -webkit-animation: spin var(--spinner-duration) linear infinite;
+    -moz-animation: spin var(--spinner-duration) linear infinite;
+    animation: spin var(--spinner-duration) linear infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+/* rotate(360deg) */
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* ------------------------------------ */
+
+
+/* UpDown */
+/* ------------------------------------ */
+
+.bottle {
+    animation: MoveUpDown var(--recipe-duration) linear infinite;
+    z-index: -1;
+}
+
+@keyframes MoveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(-500px);
+    }
+
+    50% {
+        transform: translateY(-750px);
+    }
+}
+
+/* ------------------------------------ */
+
+
+/* Timeline Cup */
+/* ------------------------------------ */
+
+.MovingCup {
+    animation: Side2Side var(--timelinecup-duration) ease-in-out;
+    z-index: 1;
+    position: relative;
+    bottom: 250px;
+    left: 4%;
+}
+
+@keyframes Side2Side {
+    0% {
+        transform: translateX(1700px);
+    }
+
+    100% {
+        transform: translateX(4%);
+    }
+}
+
+/* ------------------------------------ */
+
+
+/* Text Color */
+/* ------------------------------------ */
+
+.TextGradient {
+    background: linear-gradient(-45deg, var(--textgradient-color-1), var(--textgradient-color-1), var(--textgradient-color-2), var(--textgradient-color-2), var(--textgradient-color-3), var(--textgradient-color-3));
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated_text var(--textgradient-duration) ease-in-out infinite;
+    -moz-animation: animated_text var(--textgradient-duration) ease-in-out infinite;
+    -webkit-animation: animated_text var(--textgradient-duration) ease-in-out infinite;
+}
+
+@keyframes animated_text {
+    0% {
+        background-position: 0px 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0px 50%;
+    }
+}
+
+/* ------------------------------------ */
+
+
+
+/* Responsive */
+/* ------------------------------------ */
+
+@media screen and (max-width: 1500px) {
+
+    .Spin,
+    .responsive-hide {
+        display: none;
+    }
+
+    .InformationBlock li{
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    .InformationBlock®{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 400%;
+    }
+
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+/* ------------------------------------ */
